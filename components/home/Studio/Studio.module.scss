@@ -1,0 +1,63 @@
+.studio{
+
+padding:10rem 6rem;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:8rem;
+
+}
+
+.left{
+
+max-width:560px;
+
+}
+
+.label{
+
+letter-spacing:.25em;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+color:#777;
+
+}
+
+.left h2{
+
+margin-top:1rem;
+
+font-size:clamp(3rem,5vw,5rem);
+
+line-height:.95;
+
+}
+
+.left p{
+
+margin-top:2rem;
+
+font-size:1.1rem;
+
+line-height:1.9;
+
+color:#8d8d8d;
+
+}
+
+.right{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:3rem;
+
+align-content:start;
+
+}

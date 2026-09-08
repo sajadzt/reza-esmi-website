@@ -1,0 +1,116 @@
+.manifesto {
+  padding: 180px 0;
+  background: #f8f8f6;
+}
+
+.container {
+  width: min(1400px, calc(100% - 80px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 80px;
+
+  align-items: start;
+}
+
+.label {
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #bc3019;
+}
+
+.content {
+  max-width: 900px;
+}
+
+.title {
+  margin: 0;
+
+  font-size: clamp(3.5rem, 7vw, 7rem);
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+
+  color: #111;
+}
+
+.description {
+  margin-top: 48px;
+
+  max-width: 760px;
+
+  font-size: 1.2rem;
+  line-height: 1.9;
+
+  color: #666;
+}
+
+.highlight {
+  color: #bc3019;
+}
+
+.metrics {
+  margin-top: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+.metric {
+  border-top: 1px solid #ddd;
+  padding-top: 24px;
+}
+
+.metricNumber {
+  display: block;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  line-height: 1;
+
+  color: #111;
+}
+
+.metricLabel {
+  margin-top: 12px;
+
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+@media (max-width: 1024px) {
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .manifesto {
+    padding: 120px 0;
+  }
+
+  .title {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+}

@@ -1,0 +1,140 @@
+.architectural-holographic-wall {
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #f4f4f2;
+
+  pointer-events: auto;
+
+  z-index: 0;
+}
+
+.architectural-symbols {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+}
+
+.architectural-symbol {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+
+  pointer-events: none;
+  user-select: none;
+
+  will-change: transform, opacity, color;
+}
+
+.architectural-lines {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.16;
+}
+
+.line {
+  position: absolute;
+
+  display: block;
+
+  border: 1px solid rgba(60, 60, 60, 0.2);
+}
+
+.line-a {
+  width: 45vw;
+  height: 24vh;
+
+  left: 5vw;
+  top: 15vh;
+
+  transform: rotate(-7deg);
+}
+
+.line-b {
+  width: 30vw;
+  height: 40vh;
+
+  right: 8vw;
+  top: 20vh;
+
+  transform: rotate(12deg);
+}
+
+.line-c {
+  width: 65vw;
+  height: 1px;
+
+  left: 15vw;
+  top: 50%;
+
+  transform: rotate(-4deg);
+}
+
+.line-d {
+  width: 1px;
+  height: 75vh;
+
+  left: 50%;
+  top: 10vh;
+
+  transform: rotate(8deg);
+}
+
+.cursor-light {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.cursor-glow {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.7) 18%,
+      rgba(188, 48, 25, 0.16) 38%,
+      rgba(188, 48, 25, 0.05) 52%,
+      transparent 72%
+    );
+
+  filter: blur(18px);
+
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .architectural-symbol {
+    font-size: 11px;
+  }
+
+  .architectural-lines {
+    opacity: 0.1;
+  }
+}

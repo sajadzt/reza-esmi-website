@@ -1,0 +1,78 @@
+.contact{
+
+padding:10rem 6rem;
+
+display:grid;
+
+grid-template-columns:1.2fr 1fr;
+
+gap:8rem;
+
+border-top:1px solid #262626;
+
+}
+
+.left span{
+
+font-size:.8rem;
+
+letter-spacing:.2em;
+
+color:#777;
+
+}
+
+.left h2{
+
+margin-top:1rem;
+
+font-size:clamp(3rem,6vw,6rem);
+
+line-height:.95;
+
+}
+
+.right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:3rem;
+
+}
+
+.right h4{
+
+margin-bottom:.75rem;
+
+color:#777;
+
+text-transform:uppercase;
+
+letter-spacing:.2em;
+
+font-size:.8rem;
+
+}
+
+.right p,
+.right a{
+
+color:white;
+
+font-size:1.2rem;
+
+line-height:1.8;
+
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.right a:hover{
+
+color:var(--accent);
+
+}

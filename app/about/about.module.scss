@@ -1,0 +1,310 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  color: #f5f5f5;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  width: min(1440px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 150px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionNumber {
+  margin-bottom: 70px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.eyebrow,
+.smallLabel {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.introGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 100px;
+  align-items: end;
+}
+
+.heroTitle {
+  margin: 20px 0 0;
+  max-width: 850px;
+  font-size: clamp(64px, 9vw, 150px);
+  font-weight: 300;
+  line-height: 0.88;
+  letter-spacing: -0.065em;
+}
+
+.introText {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.introText p + p {
+  margin-top: 28px;
+}
+
+.largeStatement {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 90px;
+  font-size: clamp(44px, 6vw, 96px);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.largeStatement .muted {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.twoColumnText {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 100px;
+}
+
+.twoColumnText > div:last-child {
+  max-width: 700px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.twoColumnText p + p {
+  margin-top: 26px;
+}
+
+.statementBlock {
+  max-width: 900px;
+}
+
+.statementBlock h2 {
+  margin: 18px 0 30px;
+  font-size: clamp(42px, 5vw, 78px);
+  font-weight: 300;
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.statementBlock h2 span {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+.statementBlock > p:last-child,
+.statementBlock > p:nth-last-child(2) {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.statementBlock > p + p {
+  margin-top: 22px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 110px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.valuesGrid article {
+  min-height: 280px;
+  padding: 30px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.valuesGrid span,
+.process span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.valuesGrid h3 {
+  margin: 65px 0 18px;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.valuesGrid p {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.approachHeader {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 100px;
+  align-items: end;
+}
+
+.approachHeader h2 {
+  margin-top: 14px;
+  font-size: clamp(50px, 6vw, 92px);
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.approachHeader > p {
+  max-width: 550px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.process article {
+  min-height: 280px;
+  padding: 30px 30px 30px 0;
+  margin-right: 30px;
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.process article:last-child {
+  border-right: none;
+}
+
+.process h3 {
+  margin: 70px 0 18px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.process p {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.teamSection {
+  padding-bottom: 180px;
+}
+
+.teamIntro {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 100px;
+  align-items: end;
+  margin-bottom: 100px;
+}
+
+.teamIntro h2 {
+  margin-top: 18px;
+  font-size: clamp(48px, 6vw, 90px);
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+}
+
+.teamIntro > p {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.teamWrapper {
+  width: 100%;
+  padding-top: 30px;
+}
+
+/* -------------------------------------------------------------
+   Responsive
+------------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .section {
+    padding: 110px 0;
+  }
+
+  .introGrid,
+  .twoColumnText,
+  .approachHeader,
+  .teamIntro {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .valuesGrid,
+  .process {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process article:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    width: min(100% - 32px, 1440px);
+    padding: 90px 0;
+  }
+
+  .sectionNumber {
+    margin-bottom: 45px;
+  }
+
+  .heroTitle {
+    font-size: clamp(54px, 17vw, 100px);
+  }
+
+  .largeStatement {
+    font-size: 44px;
+    margin-bottom: 60px;
+  }
+
+  .valuesGrid,
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesGrid article {
+    min-height: 220px;
+  }
+
+  .process article {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .teamSection {
+    padding-bottom: 100px;
+  }
+}

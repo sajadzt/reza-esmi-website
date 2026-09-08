@@ -1,0 +1,240 @@
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import fs from "fs";
+import path from "path";
+
+import { projects } from "@/data/projects";
+
+import styles from "./ProjectDetail.module.scss";
+
+type Props = {
+  params: Promise<{
+    category: string;
+    slug: string;
+  }>;
+};
+
+type MediaItem = {
+  name: string;
+  url: string;
+  type: "image" | "pdf";
+};
+
+const IMAGE_EXTENSIONS = [
+  ".jpg",
+  ".jpeg",
+  ".png",
+  ".webp",
+  ".gif",
+];
+
+function getMedia(
+  category: string,
+  slug: string,
+  folder: string
+): MediaItem[] {
+  const directory = path.join(
+    process.cwd(),
+    "public",
+    "images",
+    "projects",
+    category,
+    slug,
+    folder
+  );
+
+  if (!fs.existsSync(directory)) {
+    return [];
+  }
+
+  const files = fs
+    .readdirSync(directory)
+    .filter((file) => !file.startsWith("."))
+    .sort((a, b) =>
+      a.localeCompare(b, undefined, {
+        numeric: true,
+        sensitivity: "base",
+      })
+    );
+
+  return files
+    .map((file) => {
+      const extension = path
+        .extname(file)
+        .toLowerCase();
+
+      const type = IMAGE_EXTENSIONS.includes(extension)
+        ? "image"
+        : extension === ".pdf"
+          ? "pdf"
+          : null;
+
+      if (!type) {
+        return null;
+      }
+
+      return {
+        name: file,
+        url: encodeURI(
+          `/images/projects/${category}/${slug}/${folder}/${file}`
+        ),
+        type,
+      };
+    })
+    .filter((item): item is MediaItem => item !== null);
+}
+
+export default async function ProjectPage({
+  params,
+}: Props) {
+  const { category, slug } = await params;
+
+  const project = projects.find(
+    (item) =>
+      item.category === category &&
+      item.slug === slug
+  );
+
+  if (!project) {
+    notFound();
+  }
+
+  const root = `/images/projects/${category}/${slug}`;
+
+  const hero = `${root}/hero.jpg`;
+
+  const gallery = getMedia(
+    category,
+    slug,
+    "gallery"
+  );
+
+  const diagrams = getMedia(
+    category,
+    slug,
+    "diagrams"
+  );
+
+  const plans = getMedia(
+    category,
+    slug,
+    "plans"
+  );
+
+  return (
+    <main className={styles.page}>
+      <section className={styles.hero}>
+        <div className={styles.heroImage}>
+          <Image
+            src={hero}
+            alt={project.title}
+            fill
+            priority
+            sizes="100vw"
+            className={styles.heroImageElement}
+          />
+        </div>
+
+        <div className={styles.heroOverlay} />
+
+        <div className={styles.heroContent}>
+          <span>{project.category}</span>
+
+          <h1>{project.title}</h1>
+
+          <p>
+            {project.location} · {project.year}
+          </p>
+        </div>
+      </section>
+
+      {gallery.length > 0 && (
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span>01</span>
+            <h2>Gallery</h2>
+          </div>
+
+          <div className={styles.gallery}>
+            {gallery.map((item) => (
+              <div
+                className={styles.galleryItem}
+                key={item.name}
+              >
+                <Image
+                  src={item.url}
+                  alt={`${project.title} — ${item.name}`}
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className={styles.mediaImage}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {diagrams.length > 0 && (
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span>02</span>
+            <h2>Diagrams</h2>
+          </div>
+
+          <div className={styles.diagrams}>
+            {diagrams.map((item) => (
+              <div
+                className={styles.diagramItem}
+                key={item.name}
+              >
+                <Image
+                  src={item.url}
+                  alt={`${project.title} — ${item.name}`}
+                  width={1600}
+                  height={1200}
+                  sizes="(max-width: 767px) 100vw, 80vw"
+                  className={styles.diagramImage}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {plans.length > 0 && (
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span>03</span>
+            <h2>Plans & Drawings</h2>
+          </div>
+
+          <div className={styles.plans}>
+            {plans.map((item) => (
+              <div
+                className={styles.planItem}
+                key={item.name}
+              >
+                {item.type === "image" ? (
+                  <Image
+                    src={item.url}
+                    alt={`${project.title} — ${item.name}`}
+                    width={1800}
+                    height={1400}
+                    sizes="100vw"
+                    className={styles.planImage}
+                  />
+                ) : (
+                  <iframe
+                    src={item.url}
+                    title={`${project.title} — ${item.name}`}
+                    className={styles.pdf}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+    </main>
+  );
+}

@@ -1,0 +1,155 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  padding: 28px 40px;
+
+  background: transparent;
+
+  transition: 0.4s ease;
+}
+
+
+.container {
+
+  width:100%;
+
+  display:grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items:center;
+
+}
+
+
+/* LOGO */
+
+.logo {
+
+display:flex;
+
+align-items:center;
+
+text-decoration:none;
+
+color:white;
+
+}
+
+
+.logoImage{
+
+width:150px;
+
+height:auto;
+
+object-fit:contain;
+
+}
+
+
+.brand{
+
+display:none;
+
+}
+
+
+/* CENTER MENU */
+
+.menu{
+
+display:flex;
+
+align-items:center;
+
+gap:45px;
+
+}
+
+
+.link{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+letter-spacing:.08em;
+
+text-transform:uppercase;
+
+}
+
+
+.dot{
+
+width:5px;
+
+height:5px;
+
+background:#bc3019;
+
+border-radius:50%;
+
+opacity:0;
+
+transform:scale(0);
+
+transition:.3s;
+
+}
+
+
+.link:hover .dot,
+.active .dot{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+/* RIGHT */
+
+.actions{
+
+justify-self:end;
+
+}
+
+
+.language{
+
+background:none;
+
+border:0;
+
+color:white;
+
+cursor:pointer;
+
+letter-spacing:.1em;
+
+}
+
+
+.mobileButton{
+
+display:none;
+
+}

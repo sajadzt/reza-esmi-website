@@ -1,0 +1,33 @@
+.footer{
+
+padding:5rem 6rem;
+
+border-top:1px solid #262626;
+
+}
+
+.footer h2{
+
+font-size:clamp(3rem,8vw,7rem);
+
+margin-bottom:4rem;
+
+letter-spacing:-.04em;
+
+}
+
+.bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+color:#777;
+
+text-transform:uppercase;
+
+letter-spacing:.15em;
+
+font-size:.8rem;
+
+}
