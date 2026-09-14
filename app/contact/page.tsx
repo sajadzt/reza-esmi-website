@@ -1,4 +1,8 @@
 import Link from "next/link";
+import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
+
+import { ContactCard } from "@/components/ui/contact-card";
+import InquiryForm from "@/components/contact/InquiryForm";
 
 export default function ContactPage() {
   return (
@@ -59,6 +63,33 @@ export default function ContactPage() {
             @rezaesmi.architecture
           </a>
         </div>
+      </section>
+
+      <section className="contact-inquiry">
+        <ContactCard
+          title="Get in touch"
+          description="Feel free to ask questions, get information, or tell us about your project. We would be glad to learn more and explore potential collaborations."
+          contactInfo={[
+            {
+              icon: MailIcon,
+              label: "Email",
+              value: "esmireza5@gmail.com",
+            },
+            {
+              icon: PhoneIcon,
+              label: "Phone",
+              value: "+98 915 812 0101",
+            },
+            {
+              icon: MapPinIcon,
+              label: "Office",
+              value: "Mashhad, Iran",
+              className: "col-span-2",
+            },
+          ]}
+        >
+          <InquiryForm />
+        </ContactCard>
       </section>
 
       <section className="contact-footer">
