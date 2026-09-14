@@ -26,7 +26,7 @@ export default function ProjectCollection({
       all: projects.length,
 
       industrial: projects.filter(
-        (project) => project.category === "industrial-projects"
+        (project) => project.category === "industrial"
       ).length,
 
       office: projects.filter(
@@ -52,6 +52,16 @@ export default function ProjectCollection({
       (project) => project.category === activeFilter
     );
   }, [projects, activeFilter]);
+
+  console.log("Active filter:", activeFilter);
+  console.log(
+    "Filtered projects:",
+    filteredProjects.map((project) => ({
+      title: project.title,
+      category: project.category,
+      hero: project.hero,
+    }))
+  );
 
   return (
     <section className={styles.collection}>

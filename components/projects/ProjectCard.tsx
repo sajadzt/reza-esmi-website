@@ -20,13 +20,11 @@ export default function ProjectCard({
         aria-label={`View ${project.title}`}
       >
         <div className={styles.imageWrapper}>
-          <Image
-            src={project.hero}
-            alt={project.title}
-            fill
-            sizes="(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 33vw"
-            className={styles.image}
-          />
+  <img
+    src={project.hero}
+    alt={project.title}
+    className={styles.image}
+  />
 
           <div className={styles.imageOverlay} />
         </div>

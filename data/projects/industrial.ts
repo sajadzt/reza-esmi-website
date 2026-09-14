@@ -21,21 +21,21 @@ export const industrialProjects: Project[] = [
 
     status: "completed",
 
-    hero: "/images/projects/industrial/bahraman/hero.jpg",
+    hero: "/images/projects/industrial-projects/bahraman/hero.jpg",
 
     gallery: [
 
-        "/images/projects/industrial/bahraman/4.jpg",
+        "/images/projects/industrial-projects/bahraman/4.jpg",
 
-        "/images/projects/industrial/bahraman/5.jpg",
+        "/images/projects/industrial-projects/bahraman/5.jpg",
 
-        "/images/projects/industrial/bahraman/8.jpg",
+        "/images/projects/industrial-projects/bahraman/8.jpg",
 
-        "/images/projects/industrial/bahraman/1.jpg",
+        "/images/projects/industrial-projects/bahraman/1.jpg",
 
-        "/images/projects/industrial/bahraman/3.jpg",
+        "/images/projects/industrial-projects/bahraman/3.jpg",
 
-        "/images/projects/industrial/bahraman/10.jpg",
+        "/images/projects/industrial-projects/bahraman/10.jpg",
     ],
 
     description:
@@ -74,16 +74,16 @@ export const industrialProjects: Project[] = [
 
     status: "completed",
 
-    hero: "/images/projects/industrial/aria-film/hero.jpg",
+    hero: "/images/projects/industrial-projects/aria-film/hero.jpg",
 
     gallery: [
 
-        "/images/projects/industrial/aria-film/4.jpg",
+        "/images/projects/industrial-projects/aria-film/4.jpg",
 
-        "/images/projects/industrial/aria-film/5.jpg",
+        "/images/projects/industrial-projects/aria-film/5.jpg",
 
-        "/images/projects/industrial/aria-film/6.jpg",
-"/images/projects/industrial/aria-film/7.jpg",
+        "/images/projects/industrial-projects/aria-film/6.jpg",
+"/images/projects/industrial-projects/aria-film/7.jpg",
 
     ],
 
@@ -123,16 +123,16 @@ export const industrialProjects: Project[] = [
 
     status: "completed",
 
-    hero: "/images/projects/industrial/makhmalbaft/hero.jpg",
+    hero: "/images/projects/industrial-projects/makhmalbaft/hero.jpg",
 
     gallery: [
 
-        "/images/projects/industrial/makhmalbaft/1.jpg",
+        "/images/projects/industrial-projects/makhmalbaft/1.jpg",
 
-        "/images/projects/industrial/makhmalbaft/2.jpg",
+        "/images/projects/industrial-projects/makhmalbaft/2.jpg",
 
-        "/images/projects/industrial/makhmalbaft/3.jpg",
-"/images/projects/industrial/makhmalbaft/4.jpg",
+        "/images/projects/industrial-projects/makhmalbaft/3.jpg",
+"/images/projects/industrial-projects/makhmalbaft/4.jpg",
 
     ],
 
@@ -171,18 +171,18 @@ export const industrialProjects: Project[] = [
 
     status: "completed",
 
-    hero: "/images/projects/industrial/mostafavi/hero.jpg",
+    hero: "/images/projects/industrial-projects/mostafavi/hero.jpg",
 
     gallery: [
 
-        "/images/projects/industrial/mostafavi/1.jpg",
+        "/images/projects/industrial-projects/mostafavi/1.jpg",
 
-        "/images/projects/industrial/mostafavi/2.jpg",
+        "/images/projects/industrial-projects/mostafavi/2.jpg",
 
-        "/images/projects/industrial/mostafavi/3.jpg",
+        "/images/projects/industrial-projects/mostafavi/3.jpg",
 
-"/images/projects/industrial/mostafavi/4.jpg",
-        "/images/projects/industrial/mostafavi/5.jpg",
+"/images/projects/industrial-projects/mostafavi/4.jpg",
+        "/images/projects/industrial-projects/mostafavi/5.jpg",
 
     ],
 
@@ -221,21 +221,21 @@ export const industrialProjects: Project[] = [
 
     status: "completed",
 
-    hero: "/images/projects/industrial/sirang/hero.jpg",
+    hero: "/images/projects/industrial-projects/sirang/hero.jpg",
 
     gallery: [
 
-        "/images/projects/industrial/sirang/1.jpg",
+        "/images/projects/industrial-projects/sirang/1.jpg",
 
-        "/images/projects/industrial/sirang/2.jpg",
+        "/images/projects/industrial-projects/sirang/2.jpg",
 
-        "/images/projects/industrial/sirang/3.jpg",
+        "/images/projects/industrial-projects/sirang/3.jpg",
 
-"/images/projects/industrial/sirang/4.jpg",
+"/images/projects/industrial-projects/sirang/4.jpg",
 
-        "/images/projects/industrial/sirang/5.jpg",
+        "/images/projects/industrial-projects/sirang/5.jpg",
 
-        "/images/projects/industrial/sirang/6.jpg",
+        "/images/projects/industrial-projects/sirang/6.jpg",
 
     ],
 
